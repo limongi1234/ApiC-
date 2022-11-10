@@ -1,7 +1,6 @@
 using ModeloApi.Context;
 using Microsoft.EntityFrameworkCore;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 //add services to the container
