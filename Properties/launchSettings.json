@@ -4,27 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:16703",
-      "sslPort": 44368
+      "applicationUrl": "http://localhost:3076",
+      "sslPort": 44343
     }
   },
   "profiles": {
-    "http": {
+    "TrilhaApiDesafio": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5000",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "https": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7252;http://localhost:5000",
+      "applicationUrl": "https://localhost:7295;http://localhost:5181",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

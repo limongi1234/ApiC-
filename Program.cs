@@ -1,28 +1,30 @@
-using ModeloApi.Context;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
+using ModeloApi.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//add services to the container
-builder.Services.AddDbContext<AgendaContext>(options => 
-  options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao"))); 
+// Add services to the container.
+builder.Services.AddDbContext<AgendaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
-builder.Services.AddControllersWithViews();
-
-builder.Services.AddEndPointsApiExplorer();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-if (app.Enviroment.IsDevelopment())
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.HttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
