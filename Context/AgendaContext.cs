@@ -1,17 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using ModeloApi.Models;
+using ModeloApi.Entities;
 
 namespace ModeloApi.Context
 {
-
     public class AgendaContext : DbContext
     {
         public AgendaContext(DbContextOptions<AgendaContext> options) : base(options)
         {
 
         }
-
-        public DbSet<Tarefa> Tarefas { get; set; }
+        public DbSet<Contato> Contatos { get; set; }
     }
-
 }
