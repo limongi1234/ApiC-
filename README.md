@@ -29,7 +29,7 @@ API REST em **ASP.NET Core** com **Entity Framework Core** e **SQL Server** para
 
 ## Como executar
 
-Pré-requisitos: [.NET SDK](https://dotnet.microsoft.com/download) e SQL Server (Express ou LocalDB).
+Pré-requisitos: [.NET 10 SDK](https://dotnet.microsoft.com/download) e SQL Server (Express ou LocalDB).
 
 1. Ajuste a connection string `ConexaoPadrao` em `appsettings.Development.json` se o seu servidor não for `localhost\sqlExpress`.
 2. Crie o banco aplicando as migrations:
