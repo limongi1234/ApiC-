@@ -1,6 +1,6 @@
 # ModeloApi — API de Agenda de Contatos
 
-API REST em **ASP.NET Core** com **Entity Framework Core** e **SQL Server** para cadastrar e gerenciar contatos de uma agenda. Projeto desenvolvido durante a trilha .NET da DIO.
+API REST em **ASP.NET Core** com **Entity Framework Core** e **SQL Server** para cadastrar e gerenciar contatos de uma agenda. Projeto desenvolvido acompanhando as aulas da trilha .NET da DIO, seguindo a implementação feita pelo professor.
 
 ## Tecnologias
 
